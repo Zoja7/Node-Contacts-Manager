@@ -36,7 +36,7 @@ async function removeContact(id) {
   const contacts = await readContacts();
   const index = contacts.findIndex((contact) => contact.id === id);
   if (index === -1) {
-    return undefined;
+    return null;
   }
 
   const newContacts = [
